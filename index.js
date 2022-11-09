@@ -49,7 +49,7 @@ async function run(){
                 }
             }
             const cursor = reviewCollection.find(query)
-            const review = await cursor.toArray()
+            const review = await cursor.toArray();
             res.send(review)
         })
 
@@ -61,7 +61,7 @@ async function run(){
 
         app.delete('/reviews/:id', async(req, res)=>{
             const id = req.params.id;
-            const query = {_id: ObjectId(id)}
+            const query = {_id: ObjectId(id)};
             const result = await reviewCollection.deleteOne(query)
             res.send(result)
         })
