@@ -48,7 +48,7 @@ async function run(){
                     email: req.query.email
                 }
             }
-            const cursor = reviewCollection.find(query)
+            const cursor = reviewCollection.find(query);
             const review = await cursor.toArray();
             res.send(review)
         })
